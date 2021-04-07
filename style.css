@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+i, svg {
+    pointer-events: none;
+}
+
+.sequenser {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #d1d1d1;
+}
+
+.kick-pad, .snare-pad, .hihat-pad {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bcbcbc, #e0e0e0);
+    box-shadow:  5px 5px 10px #c4c4c4, -5px -5px 10px #dedede;
+}
+
+/* .kick-pad {
+    background-color: rgb(187, 255, 232);
+} */
+.kick-pad.active {
+    background: linear-gradient(145deg, #65c3d7, #396e7a);
+}
+
+/* .snare-pad {
+    background-color: rgb(186, 210, 253);
+} */
+.snare-pad.active {
+    background: linear-gradient(145deg, #8fd765, #447a39);
+}
+
+/* .hihat-pad {
+    background-color: rgb(255, 187, 223);
+} */
+.hihat-pad.active {
+    background: linear-gradient(145deg, #ccd765, #a3a131);
+}
+
+.kick-track, .snare-track, .hihat-track {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.kick, .snare, .hihat {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin: 0rem 2rem;
+}
+
+.controls h1 {
+    width: 100px;
+    font-weight: 400;
+    font-size: 30px;
+    color: rgb(130, 130, 131);
+    padding: 1rem;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.controls button {
+    padding: 1rem;
+    border: none;
+    color: rgb(130, 130, 131);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #bcbcbc, #e0e0e0);
+    box-shadow:  5px 5px 10px #c4c4c4, -5px -5px 10px #dedede;
+    outline: none;
+}
+
+.controls button.active {
+    color:rgb(226, 71, 71);
+    background: #d2d2d2;
+    box-shadow: inset 5px 5px 10px #c5c5c5, inset -5px -5px 10px #dfdfdf;
+}
+
+.pad {
+    transition: all 0.5s ease;
+}
+
+.play {
+    padding: 1rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(130, 130, 131);
+    cursor: pointer;
+    border: none;
+    margin: 2rem;
+    background: #d2d2d2;
+    border-radius: 10px;
+    box-shadow:  5px 5px 10px #c5c5c5, -5px -5px 10px #dfdfdf;
+    outline: none;
+    transition: all 0.5s ease;
+}
+
+.play.active {
+    color:rgb(49, 209, 9);
+    border-radius: 10px;
+    background: #d2d2d2;
+    box-shadow: inset 5px 5px 10px #c5c5c5, inset -5px -5px 10px #dfdfdf;
+}
+
+select {
+    font-family: 'Poppins', sans-serif;
+    width: 160px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #bcbcbc, #e0e0e0);
+    box-shadow:  5px 5px 10px #c4c4c4, -5px -5px 10px #dedede;
+    border: none;
+    outline: none;
+}
+
+select#kick-select {
+    color: #3b94a8;
+}
+
+select#snare-select {
+    color: #48a83b;
+}
+
+select#hihat-select {
+    color: #8f9632;
+}
+
+.mute.active {
+    background-color:rgb(226, 71, 71);
+    outline: none;
+}
+
+.tempo {
+    margin: 1rem;
+    width: 30%;
+}
+
+.tempo-slider {
+    
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    background: #d2d2d2;
+    box-shadow: inset 5px 5px 10px #b1b1b1, inset -5px -5px 10px #dfdfdf;
+    cursor: pointer;
+    border-radius: 1rem;
+    outline: none;
+}
+
+.tempo p {
+    color: rgb(130, 130, 131);
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
