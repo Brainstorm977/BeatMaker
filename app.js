@@ -70,7 +70,7 @@ class DrumKit {
             this.playBtn.classList.add('active');
         }
         else {
-            this.playBtn.innerText = 'Play';
+            // this.playBtn.innerText = 'Play';
             this.playBtn.classList.remove('active');
         }
     }
